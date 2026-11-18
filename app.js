@@ -19,7 +19,7 @@ app.resetCategories = () => {
 
 // Endpoint de salud (Health Check)
 app.get('/health', (req, res) => {
-  res.status(200).json({ status: 'ok', uptime: process.uptime() });
+  res.status(200).json({ status: 'ok', version: '2.0.0' });
 });
 
 // Endpoint GET: Listar todas las categorías

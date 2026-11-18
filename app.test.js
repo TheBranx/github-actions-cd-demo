@@ -7,11 +7,11 @@ describe('API Tests - Suite Completa CRUD de Categorías', () => {
   });
 
   describe('GET /health', () => {
-    test('Debe retornar status 200 y status ok', async () => {
+    test('Debe retornar status 200, status ok y version 2.0.0', async () => {
       const res = await request(app).get('/health');
       expect(res.statusCode).toBe(200);
       expect(res.body.status).toBe('ok');
-      expect(res.body).toHaveProperty('uptime');
+      expect(res.body.version).toBe('2.0.0');
     });
   });
 
